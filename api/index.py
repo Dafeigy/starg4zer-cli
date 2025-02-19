@@ -53,6 +53,7 @@ async def get_info(user_name: str):
         "user_id": user_id,
         "num_page": page_num
         }
+    
 @app.get("/star/{user_name}")
 async def get_repos(user_name: str):
     headers = {
@@ -80,3 +81,6 @@ async def get_repos(user_name: str):
             f.writelines(str(second_results))
     return second_results
     
+@app.get("/test_search")
+async def search_results():
+    return [{'reponame': 'Zyphra/Zonos', 'clone_url': 'https://github.com/Zyphra/Zonos', 'update_date': '2025-02-19T07:30:46Z', 'avatar_url': 'https://avatars.githubusercontent.com/u/137229384?v=4', 'star_count': 4922, 'fork_count': 458, 'lang': 'Python', 'desc': 'Zonos-v0.1 is a leading open-weight text-to-speech model trained on more than 200k hours of varied multilingual speech, delivering expressiveness and quality on par with—or even surpassing—top TTS providers.'}, {'reponame': 'sdbds/Zonos-for-windows', 'clone_url': 'https://github.com/sdbds/Zonos-for-windows', 'update_date': '2025-02-19T07:18:55Z', 'avatar_url': 'https://avatars.githubusercontent.com/u/8085926?v=4', 'star_count': 262, 'fork_count': 27, 'lang': 'Python', 'desc': None}, {'reponame': 'e-p-armstrong/augmentoolkit', 'clone_url': 'https://github.com/e-p-armstrong/augmentoolkit', 'update_date': '2025-02-19T06:34:21Z', 'avatar_url': 'https://avatars.githubusercontent.com/u/64122766?v=4', 'star_count': 1301, 'fork_count': 174, 'lang': 'Python', 'desc': 'Convert Compute And Books Into Instruct-Tuning Datasets! Makes: QA, RP, Classifiers.'}, {'reponame': 'openai/CLIP', 'clone_url': 'https://github.com/openai/CLIP', 'update_date': '2025-02-19T07:11:55Z', 'avatar_url': 'https://avatars.githubusercontent.com/u/14957082?v=4', 'star_count': 27410, 'fork_count': 3440, 'lang': 'Jupyter Notebook', 'desc': 'CLIP (Contrastive Language-Image Pretraining),  Predict the most relevant text snippet given an image'}, {'reponame': 'openai/tiktoken', 'clone_url': 'https://github.com/openai/tiktoken', 'update_date': '2025-02-19T06:43:54Z', 'avatar_url': 'https://avatars.githubusercontent.com/u/14957082?v=4', 'star_count': 13435, 'fork_count': 944, 'lang': 'Python', 'desc': "tiktoken is a fast BPE tokeniser for use with OpenAI's models."}]
